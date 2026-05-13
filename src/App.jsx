@@ -121,9 +121,9 @@ function App() {
           <div className="container">
             <h2>Contact</h2>
             <div className="card">
-              <p>Email: your@email.com</p>
-              <p>GitHub: github.com/yourusername</p>
-              <p>LinkedIn: linkedin.com/in/yourusername</p>
+              <p>Email: abhisingh244f@gmail.com</p>
+              <p>GitHub: github.com/abhishekroket</p>
+              <p>LinkedIn: linkedin.com/in/abhishek-kumar-singh</p>
             </div>
           </div>
         );
