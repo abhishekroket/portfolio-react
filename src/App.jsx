@@ -123,7 +123,7 @@ function App() {
             <div className="card">
               <p>Email: abhisingh244f@gmail.com</p>
               <p>GitHub: github.com/abhishekroket</p>
-              <p>LinkedIn: linkedin.com/in/abhishek-kumar-singh</p>
+              <p>LinkedIn: https://www.linkedin.com/in/abhishek-singh-699ba8384 </p>
             </div>
           </div>
         );
