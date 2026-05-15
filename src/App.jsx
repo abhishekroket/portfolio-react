@@ -245,15 +245,57 @@ function App() {
         );
 
       case "blogs":
-        return (
-          <div className="container">
-            <h2>Blogs</h2>
-            <div className="card">
-              <h3>My Learning Journey</h3>
-              <p>Articles about programming and web development.</p>
-            </div>
-          </div>
-        );
+  return (
+    <div className="container">
+      <section className="blog-section">
+        <p className="section-label">Featured</p>
+        <h2>Blogs</h2>
+
+        <div className="blog-card">
+          <h3>How I Built My Full Stack Portfolio with React and Node.js</h3>
+
+          <p className="blog-date">May 2026 • 5 min read</p>
+
+          <p>
+            In this article, I share how I created my personal portfolio
+            using React, Vite, Node.js, Express, and deployed it using
+            Vercel and Render. The project includes a responsive design,
+            live contact form, and GitHub activity integration.
+          </p>
+
+          <a
+            href="https://github.com/abhishekroket/portfolio-react"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn secondary"
+          >
+            Read More
+          </a>
+        </div>
+
+        <div className="blog-card">
+          <h3>My Journey to Becoming a Full Stack Developer</h3>
+
+          <p className="blog-date">May 2026 • 4 min read</p>
+
+          <p>
+            From learning C programming to building modern web applications
+            with React and Node.js, this blog summarizes my learning path,
+            projects, and goals as a BTech Computer Science student.
+          </p>
+
+          <a
+            href="https://github.com/abhishekroket"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn secondary"
+          >
+            Read More
+          </a>
+        </div>
+      </section>
+    </div>
+  );
 
       case "projects":
         return (
