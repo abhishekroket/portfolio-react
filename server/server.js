@@ -1,8 +1,9 @@
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 
-const express = require("express");
-const cors = require("cors");
-const nodemailer = require("nodemailer");
+import express from "express";
+import cors from "cors";
+import nodemailer from "nodemailer";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -45,7 +46,6 @@ app.post("/api/contact", async (req, res) => {
       `,
     });
 
-    // Success response
     res.json({
       success: true,
       message: "Message sent successfully!",
@@ -53,7 +53,6 @@ app.post("/api/contact", async (req, res) => {
   } catch (error) {
     console.error("Email error:", error);
 
-    // Error response
     res.status(500).json({
       success: false,
       message: "Something went wrong.",

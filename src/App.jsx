@@ -151,7 +151,8 @@ function App() {
                 <div className="hero-actions">
                   <a
                     href="/resume.pdf"
-                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn secondary"
                   >
                     Resume
