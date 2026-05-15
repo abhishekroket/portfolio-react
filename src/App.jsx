@@ -5,6 +5,7 @@ function ContactPage() {
   const [form, setForm] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
 
@@ -22,38 +23,45 @@ function ContactPage() {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("https://portfolio-react-dmw2.onrender.com/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      });
+      const response = await fetch(
+        "https://portfolio-react-dmw2.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(form),
+        }
+      );
 
       const data = await response.json();
 
       if (data.success) {
         setStatus("Message sent successfully!");
 
+        // Clear the form after successful submission
         setForm({
           name: "",
           email: "",
+          phone: "",
           message: "",
         });
       } else {
-        setStatus(data.message);
+        setStatus(data.message || "Failed to send message.");
       }
     } catch (error) {
+      console.error(error);
       setStatus("Server connection failed.");
     }
   };
 
   return (
     <div className="container">
-      <h2>Contact Me</h2>
+      <h2>Contact me</h2>
 
       <div className="card">
         <form onSubmit={handleSubmit}>
+          {/* Name */}
           <input
             type="text"
             name="name"
@@ -63,6 +71,7 @@ function ContactPage() {
             required
           />
 
+          {/* Email */}
           <input
             type="email"
             name="email"
@@ -72,6 +81,16 @@ function ContactPage() {
             required
           />
 
+          {/* Phone Number */}
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Your Phone Number"
+            value={form.phone}
+            onChange={handleChange}
+          />
+
+          {/* Message */}
           <textarea
             name="message"
             placeholder="Your Message"
@@ -81,12 +100,14 @@ function ContactPage() {
             required
           ></textarea>
 
+          {/* Submit Button */}
           <button type="submit" className="btn">
             Send Message
           </button>
         </form>
 
-        <p>{status}</p>
+        {/* Status Message */}
+        {status && <p>{status}</p>}
       </div>
     </div>
   );
@@ -344,12 +365,7 @@ function App() {
             Projects
           </button>
 
-          <button
-            className="nav-link"
-            onClick={() => setActivePage("contact")}
-          >
-            Contact
-          </button>
+          
         </div>
       </nav>
 
