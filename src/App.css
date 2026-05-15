@@ -337,3 +337,104 @@ form .btn {
     text-align: center;
   }
 }
+
+/* About Section */
+.about-section,
+.github-section {
+  margin-top: 60px;
+}
+
+.section-label {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+
+.about-card {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background: #0a1633;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.about-image {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+.about-content h3 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.about-content p {
+  color: #d1d5db;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  }
+
+.skills span {
+  background: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* GitHub Section */
+.github-card {
+  background: #0a1633;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.github-card p {
+  color: #f0f3f1;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+ .about-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-content h3 {
+    font-size: 1.6rem;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+}
+.github-graph {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  background: #0d1117;
+  padding: 10px;
+}

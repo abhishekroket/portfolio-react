@@ -157,6 +157,64 @@ function App() {
                 Python, and SQL. I enjoy solving problems and creating
                 real-world projects.
               </p>
+              {/* About Section */}
+<section className="about-section">
+  <p className="section-label">About</p>
+  <h2>Me</h2>
+
+  <div className="about-card">
+    <img
+      src="/profile.jpg"
+      alt="Abhishek Kumar Singh"
+      className="about-image"
+    />
+
+    <div className="about-content">
+      <h3>Abhishek Kumar Singh</h3>
+
+      <p>
+        I am a BTech Computer Science student and Full Stack Developer.
+        I build responsive web applications using React, JavaScript,
+        Node.js, Express, Python, and SQL. I enjoy solving real-world
+        problems and continuously improving my development skills.
+      </p>
+
+      <div className="skills">
+        <span>React</span>
+        <span>JavaScript</span>
+        <span>Node.js</span>
+        <span>Express</span>
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Git</span>
+        <span>GitHub</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* GitHub Activity Section */}
+<section className="github-section">
+  <p className="section-label">Development</p>
+  <h2>GitHub Activity</h2>
+
+  <div className="github-card">
+    <img
+      src="https://ghchart.rshah.org/3b82f6/abhishekroket"
+      alt="GitHub Contribution Graph"
+      className="github-graph"
+    />
+
+    <a
+      href="https://github.com/abhishekroket"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn secondary"
+    >
+      View GitHub Profile
+    </a>
+  </div>
+</section>
             </div>
 
             {/* Featured Projects */}
